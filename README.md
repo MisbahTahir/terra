@@ -2,7 +2,7 @@
 
 A simple, interactive web application designed to help students organize their study tasks, set goals, and keep track of their progress.
 
- Features
+ Features:
 
 - **Task Management:** Add and manage study tasks.
 - **Study Goals:** Define goals for individual study sessions.
