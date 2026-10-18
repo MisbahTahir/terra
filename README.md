@@ -20,7 +20,7 @@ Getting Started
 
 1. Clone or download this repository.
 2. Open the project folder.
-3. Open `index.html` in your browser.
+3. Open `home.html` in your browser.
 4. Start organizing your study sessions!
 
  Purpose
