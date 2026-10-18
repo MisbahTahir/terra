@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Focus Mode | Study Track</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="focus.js" defer></script>
+  </head>
+
+  <body>
+    <header class="topbar">
+      <a href="index.html" class="logo">Study <span>Track.</span></a>
+      <a href="index.html" class="back-link">← Dashboard</a>
+    </header>
+
+    <main class="container">
+      <section class="welcome">
+        <div>
+          <p class="eyebrow">YOUR STUDY SPACE</p>
+          <h1>Focus on what matters.</h1>
+          <p>One subject. One task. One step at a time.</p>
+        </div>
+      </section>
+
+      <section id="focus-setup">
+        <h2>Set Up Your Session</h2>
+
+        <label for="subject">Subject</label>
+        <select id="subject">
+          <option value="Mathematics">Mathematics</option>
+          <option value="Physics">Physics</option>
+          <option value="Computer Science">Computer Science</option>
+          <option value="English">English</option>
+          <option value="Chemistry">Chemistry</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <label for="study-task">Study Task</label>
+        <select id="study-task">
+          <option value="">General study session</option>
+        </select>
+
+        <label for="study-goal">Session Goal</label>
+        <input
+          type="text"
+          id="study-goal"
+          placeholder="e.g. Solve 10 practice questions"
+        />
+
+        <h3>Choose Your Timer</h3>
+
+        <div class="timer-options">
+          <button
+            type="button"
+            class="duration-option active"
+            data-focus="25"
+            data-break="5"
+          >
+            25 / 5
+            <span>Classic</span>
+          </button>
+
+          <button
+            type="button"
+            class="duration-option"
+            data-focus="50"
+            data-break="10"
+          >
+            50 / 10
+            <span>Extended</span>
+          </button>
+        </div>
+
+        <div class="custom-duration">
+          <label for="custom-focus">Focus Minutes</label>
+          <input type="number" id="custom-focus" min="1" max="180" value="25" />
+
+          <label for="custom-break">Break Minutes</label>
+          <input type="number" id="custom-break" min="1" max="60" value="5" />
+        </div>
+      </section>
+
+      <section id="focus-timer">
+        <h2 id="timer-mode">FOCUS SESSION</h2>
+
+        <div id="timer" role="timer" aria-live="off">25:00</div>
+
+        <p id="timer-message">Ready when you are.</p>
+
+        <div class="timer-controls">
+          <button type="button" id="start-button">Start Focus</button>
+          <button type="button" id="pause-button" disabled>Pause</button>
+          <button type="button" id="reset-button">Reset</button>
+        </div>
+
+        <p id="session-message" role="status" aria-live="polite"></p>
+      </section>
+
+      <section id="session-summary">
+        <h2>Today's Focus</h2>
+
+        <div class="stats">
+          <p>
+            Sessions Completed:
+            <strong id="sessions-count">0</strong>
+          </p>
+
+          <p>
+            Focused Time:
+            <strong id="focused-time">0 min</strong>
+          </p>
+        </div>
+
+        <h3>Session History</h3>
+
+        <ul id="session-history">
+          <li>No sessions completed yet. Your progress will appear here.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>Small steps lead to big progress.</p>
+    </footer>
+  </body>
+</html>

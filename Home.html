@@ -1,8 +1,107 @@
 <html>
   <head>
-    <title> Study Tracker</title>
+    <title>Study Tracker</title>
+    <link rel="stylesheet" href="style.css">
   </head>
+
   <body>
-    
+    <header class="topbar">
+      <a href="#" class="logo">Study <span>Track.</span></a>
+      <p>Your goals, one task at a time.</p>
+    </header>
+
+    <main class="container">
+      <section class="welcome">
+        <div>
+          <p class="eyebrow">Your Study Space</p>
+          <h1>Make Today Count</h1>
+          <p>Plan your work, stay focused, and celebrate your progress.</p>
+        </div>
+      </section>
+
+      <section id="dashboard">
+        <h2>My Progress</h2>
+        <p>Total Tasks: <span id="total-tasks">0</span></p>
+        <p>Completed: <span id="completed-tasks">0</span></p>
+        <p>Pending: <span id="pending-tasks">0</span></p>
+        <p>Progress: <span id="progress">0%</span></p>
+
+        <div class="progress-track">
+          <div id="progress-bar"></div>
+        </div>
+      </section>
+
+      <div class="workspace">
+        <section id="add-task-section">
+          <h2>Add a Study Task</h2>
+
+          <form id="task-form">
+            <label for="task-title">Task Name</label>
+            <input
+              type="text"
+              id="task-title"
+              placeholder="e.g. Complete Math Unit 1"
+              required
+            >
+
+            <label for="task-subjects">Subject</label>
+            <select id="task-subjects">
+              <option>Mathematics</option>
+              <option>English</option>
+              <option>Physics</option>
+              <option>Computer Science</option>
+              <option>Chemistry</option>
+              <option>Other</option>
+            </select>
+
+            <label for="task-date">Due Date (Optional)</label>
+            <input type="date" id="task-date">
+
+            <label for="task-priority">Priority</label>
+            <select id="task-priority">
+              <option>Low</option>
+              <option selected>Medium</option>
+              <option>High</option>
+            </select>
+
+            <button type="submit">Add Task</button>
+          </form>
+        </section>
+
+        <section id="task-list-section">
+          <h2>My Tasks</h2>
+
+          <div>
+            <label for="status-filter">Status</label>
+            <select id="status-filter">
+              <option>ALL</option>
+              <option>Pending</option>
+              <option>Completed</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="subject-filter">Subject</label>
+            <select id="subject-filter">
+              <option>ALL</option>
+              <option>Mathematics</option>
+              <option>Physics</option>
+              <option>Computer Science</option>
+              <option>English</option>
+              <option>Chemistry</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <ul id="task-list"></ul>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <p>Small steps lead to big progress.</p>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
